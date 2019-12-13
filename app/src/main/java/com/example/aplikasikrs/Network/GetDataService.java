@@ -1,6 +1,7 @@
 package com.example.aplikasikrs.Network;
 
 import com.example.aplikasikrs.Admin.Model.Dosen;
+import com.example.aplikasikrs.Admin.Model.Mahasiswa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +21,8 @@ public interface GetDataService {
     @FormUrlEncoded
     @POST("api/progmob/dosen/delete")
     Call<DefaultResult> delete_dosen(
-        @Field("id") String id,
-        @Field("nim_progmob") String nim_progmob
+            @Field("id") String id,
+            @Field("nim_progmob") String nim_progmob
     );
 
     @GET("/api/progmob/dosen/{nim_progmob}")
@@ -76,6 +77,40 @@ public interface GetDataService {
             @Field("gelar") String gelar,
             @Field("foto") String foto,
             @Field("nim_progmob") String nim_progmob
+    );
+
+
+    @GET("/api/progmob/mhs/{nim_progmob}")
+    Call<ArrayList<Mahasiswa>> getMhsAll(@Path("nim_progmob") String nim_progmob);
+
+    @FormUrlEncoded
+    @POST("api/progmob/mhs/delete")
+    Call<DefaultResult> delete_mhs(
+            @Field("id") String id,
+            @Field("nim_progmob") String nim_progmob
+    );
+
+    @FormUrlEncoded
+    @POST("/api/progmob/mhs/create") //id,nama,nim,alamat,email,foto,nim_progmob
+    Call<DefaultResult> insert_mhs(
+            @Field("nama") String nama_mhs,
+            @Field("nim") String nim,
+            @Field("alamat") String alamat_mhs,
+            @Field("email") String email_mhs,
+            @Field("foto") String foto_mhs,
+            @Field("nim_progmob") String nim_progmob_mhs
+    );
+
+    @FormUrlEncoded
+    @POST("api/progmob/mhs/update") // id,nama,nim,alamat,email,foto,nim_progmob
+    Call<DefaultResult> update_mhs(
+            @Field("id") String id_mhs,
+            @Field("nama") String nama_mhs,
+            @Field("nim") String nidn_mhs,
+            @Field("alamat") String alamat_mhs,
+            @Field("email") String email_mhs,
+            @Field("foto") String foto_mhs,
+            @Field("nim_progmob") String nim_progmob_mhs
     );
 
     /*@FormUrlEncoded
