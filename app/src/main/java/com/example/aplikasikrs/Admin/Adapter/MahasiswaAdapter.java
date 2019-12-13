@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
+//rick
 import com.example.aplikasikrs.Admin.CreateMhsActivity;
 import com.example.aplikasikrs.Admin.Model.Mahasiswa;
 import com.example.aplikasikrs.MainActivity;

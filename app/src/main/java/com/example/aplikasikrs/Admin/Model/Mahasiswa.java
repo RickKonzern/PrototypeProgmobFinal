@@ -19,7 +19,7 @@ public class Mahasiswa {
     @SerializedName("alamat")
     @Expose
     private String alamatMhs;
-
+//rick
 
     @SerializedName("foto")
     @Expose

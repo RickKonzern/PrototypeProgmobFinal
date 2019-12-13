@@ -61,7 +61,7 @@ public class CreateMhsActivity extends AppCompatActivity {
                     Manifest.permission.READ_EXTERNAL_STORAGE
             }, FILE_ACCESS_REQUEST_CODE);
         }
-
+//rick
         edtNama = (EditText)findViewById(R.id.edtNamaMhs);
         edtNim = (EditText)findViewById(R.id.edtNimMhs);
         edtAlamat = (EditText)findViewById(R.id.edtAlamatMhs);
